@@ -131,7 +131,14 @@
         <!-- alert -->
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
             <i class="bi bi-exclamation-diamond-fill"></i></i>
-            Your Connection is Low !
+            <h6 id="name">Your Connection is Low !</h6>
+            <script>
+             let change = document.getElementsByTagName("h6")[0];
+
+                change.onclick = () => {
+                change.innerHTML = (change.innerHTML == "Restart Your Connection") ? "Your Connection is Low !" : "Restart Your Connection";
+             }
+            </script>
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
 
@@ -169,7 +176,8 @@
                 </div>
                 <p class="mb-4">So what are you waiting for, join us on one of the best stock exchange platforms in the world</p>
                 <h3>Best Regards,</h3>
-                <h4>Go Trade Team</h4>
+                <h4 id="name">Go Trade Team</h4>
+                
             </div>
             <div class="col-lg-5 pb-5" style="min-height: 400px;">
                 <div class="position-relative bg-dark-radial h-100 ms-5">
